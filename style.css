@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*   viewport units: vh is viewport height, vw is viewport width, vmin to use the smallest between vh and vw    */
+  height: 100vh;
+  margin: 0;
+  font-family: 'Gloria Hallelujah', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  font-size: 4vmin;
+  color: darkred;
+  letter-spacing: 1vmin;
+}
+
+h1 {
+  color: darkolivegreen;
+  font-size: 3vmin;
+}
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 10vmin);
+  grid-template-rows: repeat(3, 10vmin);
+  margin-top: -0.5vmin;
+  font-size: 4vmin;
+  text-align: center;
+}
+
+
+#board>div {
+  border: 0.2vmin ridge darkred;
+}
+
+div#sq0, div#sq3, div#sq6{
+  border-left: none;
+}
+
+div#sq2, div#sq5, div#sq8 {
+  border-right: none;
+}
+
+div#sq0, div#sq1, div#sq2 {
+  border-top: none;
+}
+
+div#sq6, div#sq7, div#sq8 {
+  border-bottom: none;
+}
+
+button {
+  margin-top: 8vmin;
+  padding: 2vmin;
+  font-size: 2vmin;
+  border-radius: 4vmin;
+  border: 0.5vmin inset gray;
+  color: darkred;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+button:hover {
+  color: darkolivegreen;
+  border: 0.5vmin outset darkred;
+  background-color: whitesmoke;
+}
